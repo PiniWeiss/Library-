@@ -34,17 +34,18 @@ class Library:
             if book.outher == outher:
                 return book
             
+    
     @staticmethod
-    def load_book():
-        with open("data/book.json", "r") as books:
-             json.load(books)
-
-    def load_user_to_json(self, user:User):
+    def add_user_to_json(user:User):
         user_dict = {}
         user_dict["name"] = user.name
         user_dict["id"] = user.id
-        with open("data/users_ss", "r") as d:
-            user = json.load(d)
-            
-        with open("data/users_ss", "w") as users_data:
-            json.dump(user_dict, users_data, ident=4)
+        user_dict["borroed_books"] = []
+        with open("data/users_ss.json", "r") as d:
+            users = json.load(d)
+            users["users"].append(user_dict) 
+                
+        with open("data/users_ss.json", "w") as users_data:
+            json.dump(users, users_data, indent=4)
+
+# Library.add_user_to_json(User("pini","999-9",[]))
