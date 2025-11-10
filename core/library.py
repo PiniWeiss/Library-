@@ -48,4 +48,3 @@ class Library:
         with open("data/users_ss.json", "w") as users_data:
             json.dump(users, users_data, indent=4)
 
-# Library.add_user_to_json(User("pini","999-9",[]))
