@@ -10,6 +10,3 @@ class Data:
     @staticmethod  
     def load_from_json_books(data_json):
         return Data.load_from_json(data_json)["books"]
-    
-
-

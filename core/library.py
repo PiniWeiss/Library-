@@ -13,8 +13,15 @@ class Library:
                 self.availeble_books.append(book)
 
     def add_book(self, book:Book):
-        self.books.append(book)
-        print(f"{book} added to the library.")
+        book_dict = {}
+        book_dict["title"] = book.title
+        book_dict["outher"] = book.outher
+        book_dict["ISBN"] = book.ISBN
+        with open("data/books.json", "r") as books:
+                books_j = json.load(books)              
+                books_j["books"].append(book_dict)
+        with open("data/books.json", "w") as books:         
+            json.dump(books_j, books, indent=4)
 
 
     def search_book_by_title(self, title:str):
@@ -34,19 +41,15 @@ class Library:
         for book in books_j["books"]:
             self.books.append(book)
     
-    @staticmethod
-    def add_book_to_json(book:Book):
-        book_dict = {}
-        book_dict["title"] = book.title
-        book_dict["outher"] = book.outher
-        book_dict["ISBN"] = book.ISBN
-        with open("data/books.json", "r") as books:
-                books_j = json.load(books)              
-                books_j["books"].append(book_dict)
-        with open("data/books.json", "w") as books:
+    # @staticmethod
+    # def add_book_to_json(book:Book):
+    #     book_dict = {}
+    #     book_dict["title"] = book.title
+    #     book_dict["outher"] = book.outher
+    #     book_dict["ISBN"] = book.ISBN
+    #     with open("data/books.json", "r") as books:
+    #             books_j = json.load(books)              
+    #             books_j["books"].append(book_dict)
+    #     with open("data/books.json", "w") as books:         
+    #         json.dump(books_j, books, indent=4)
             
-            json.dump(books_j, books, indent=4)
-            
-
-
-
