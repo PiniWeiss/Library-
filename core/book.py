@@ -4,8 +4,7 @@ class Book:
         self.outher = outher
         self.ISBN = ISBN
         self.is_vaileble = is_availeble
+        
     def __str__(self):
         return f"Book name: {self.title}. Outher: {self.outher}. Book id: {self.ISBN}"
-
-b = Book("The 6:20 man", "david baladchi", "t3325")
-print(b)
+    
