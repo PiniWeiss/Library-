@@ -8,7 +8,7 @@ class Library:
         self.availeble_books = []
         for book in self.books:
             if book.is_availeble:
-                self.availeble_books.append(b)
+                self.availeble_books.append(book)
 
     def add_book(self, book:Book):
         self.books.append(book)
