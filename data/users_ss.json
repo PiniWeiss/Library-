@@ -1,4 +1,5 @@
-[
+{
+  "users":[
   {
     "name": "Daniel Levy",
     "id": "A1B2C3D4E5F6G7H8I9J0"
@@ -60,3 +61,4 @@
     "id": "O5P6Q7R8S9T0U1V2W3X4"
   }
 ]
+}
