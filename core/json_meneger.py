@@ -12,7 +12,7 @@ class Data:
         return Data.load_from_json(data_json)["books"]
     
     @staticmethod
-    def add_data_to_json_books(data, data_json="data/books.json"):    
+    def add_data_to_json_books(data:dict, data_json="data/books.json"):    
         books_list = Data.load_from_json(data_json)["books"]
         books_list.append(data)
         books_dict = {}
