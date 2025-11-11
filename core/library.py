@@ -33,8 +33,3 @@ class Library:
     def search_book_by_outher(self):
         list_books = self.books
         return self.search_by_type(list_books,type="outher")
-
-            
-    
-    
-            

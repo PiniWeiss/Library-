@@ -13,8 +13,9 @@ class Data:
     
     @staticmethod
     def add_data_to_json_books(data, data_json="data/books.json"):    
-        books_dict = Data.load_from_json(data_json)["books"]
-        books_dict.append(data)
-        # print(books_dict)
+        books_list = Data.load_from_json(data_json)["books"]
+        books_list.append(data)
+        books_dict = {}
+        books_dict["books"] = books_list
         with open(data_json, "w") as books:         
             json.dump(books_dict, books, indent=4)
