@@ -36,18 +36,3 @@ class Library:
         for book in self.books:
             if book["outher"] == outher:
                 return book
-            
-    
-    @staticmethod
-    def add_user_to_json(user:User):
-        user_dict = {}
-        user_dict["name"] = user.name
-        user_dict["id"] = user.id
-        user_dict["borroed_books"] = []
-        with open("data/users_ss.json", "r") as d:
-            users = json.load(d)
-            users["users"].append(user_dict) 
-                
-        with open("data/users_ss.json", "w") as users_data:
-            json.dump(users, users_data, indent=4)
-
