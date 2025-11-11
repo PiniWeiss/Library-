@@ -1,8 +1,10 @@
 class Book:
+    UID = 1000
     def __init__(self,title:str, outher:str, ISBN:str ,is_availeble:bool=True):
         self.title = title
         self.outher = outher
-        self.ISBN = ISBN
+        self.ISBN = Book.UID
+        Book.UID += 1
         self.is_vaileble = is_availeble
         
     def __str__(self):

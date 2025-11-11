@@ -1,5 +1,5 @@
-from user import User
-from book import Book
+from core.user import User
+from core.book import Book
 import json
 from core.json_meneger import Data
 
@@ -31,7 +31,7 @@ class Library:
 
     def borrow_book(self, user_id, book_isbn):
         if book_isbn in self.availeble_books:
-            book_isbn.is_availble = False
+            self.book["is_availble"] = False
             user_id.self.borrowed_books.append(book_isbn)
 
     def search_book_by_title(self, title:str):
@@ -57,4 +57,5 @@ class Library:
                 
         with open("data/users_ss.json", "w") as users_data:
             json.dump(users, users_data, indent=4)
+
 
