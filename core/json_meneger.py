@@ -2,7 +2,7 @@ import json
 
 class Data:
     @staticmethod
-    def load_from_json(data_json):
+    def load_from_json(data_json:json):
         with open(data_json) as data:
             data_json_dict = json.load(data)
             return data_json_dict
@@ -10,3 +10,11 @@ class Data:
     @staticmethod  
     def load_from_json_books(data_json):
         return Data.load_from_json(data_json)["books"]
+    
+    @staticmethod
+    def add_data_to_json_books(data, data_json="data/books.json"):    
+        books_dict = Data.load_from_json(data_json)["books"]
+        books_dict.append(data)
+        # print(books_dict)
+        with open(data_json, "w") as books:         
+            json.dump(books_dict, books, indent=4)
