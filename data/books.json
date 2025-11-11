@@ -122,14 +122,15 @@
         },
         {
             "title": "The 6:20 Man",
-            "outher": "David Bladachi",
+            "outher": "david bladachi",
             "ISBN": "21-990",
             "is_availeble": true
         },
         {
             "title": "The 6:20 Man",
             "outher": "David Bladachi",
-            "ISBN": "21-990"
+            "ISBN": "21-990",
+            "is_vaileble": true
         }
     ]
 }

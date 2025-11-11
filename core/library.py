@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-from core.book import Book
-=======
 from user import User
 from book import Book
->>>>>>> shlomo
 import json
 from core.json_meneger import Data
+
 
 
 class Library:
@@ -49,26 +46,6 @@ class Library:
             
     
     @staticmethod
-<<<<<<< HEAD
-    def load_books_from_json(self):
-        with open("data/books.json", "r") as books:
-           books_j = json.load(books)
-        for book in books_j["books"]:
-            self.books.append(book)
-    
-    # @staticmethod
-    # def add_book_to_json(book:Book):
-    #     book_dict = {}
-    #     book_dict["title"] = book.title
-    #     book_dict["outher"] = book.outher
-    #     book_dict["ISBN"] = book.ISBN
-    #     with open("data/books.json", "r") as books:
-    #             books_j = json.load(books)              
-    #             books_j["books"].append(book_dict)
-    #     with open("data/books.json", "w") as books:         
-    #         json.dump(books_j, books, indent=4)
-            
-=======
     def add_user_to_json(user:User):
         user_dict = {}
         user_dict["name"] = user.name
@@ -81,4 +58,3 @@ class Library:
         with open("data/users_ss.json", "w") as users_data:
             json.dump(users, users_data, indent=4)
 
->>>>>>> shlomo
