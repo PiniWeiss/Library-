@@ -14,8 +14,13 @@ class Library:
                 self.availeble_books.append(book)
 
     def add_book(self, book:Book):
-        book_dict = vars(book)
-        Data.add_data_to_json_books(book_dict)
+        books_dict = vars(book)
+        Data.add_data_to_json_books(books_dict)
+
+    def add_user(self, user:User):
+        users_dict = vars(user)
+        Data.add_data_to_json_users(users_dict)
+
 
 
 
