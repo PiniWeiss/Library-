@@ -1,5 +1,5 @@
-from core.user import User
-from core.book import Book
+from user import User
+from book import Book
 import json
 from core.json_meneger import Data
 
@@ -8,26 +8,19 @@ from core.json_meneger import Data
 class Library:
     def __init__(self):
         self.books = Data.load_from_json_books("data/books.json")
-        self.users = []
+        self.users = Data.load_from_json_users("data/users.json")
         self.availeble_books = []
         for book in self.books:
             if book["is_availeble"]:
                  self.availeble_books.append(book)
 
     def add_book(self, book:Book):
-        book_dict = {}
-        book_dict["title"] = book.title
-        book_dict["outher"] = book.outher
-        book_dict["ISBN"] = book.ISBN
-        with open("data/books.json", "r") as books:
-                books_j = json.load(books)              
-                books_j["books"].append(book_dict)
-        with open("data/books.json", "w") as books:         
-            json.dump(books_j, books, indent=4)
+        book_dict = vars(book)
+        Data.add_data_to_json_books(book_dict)
 
-    def add_user(self, user):
-        self.users.append(user)
-        print(f"{user} add to your libary")
+    def add_user(self, user:User):
+        users_dict = vars(user)
+        Data.add_data_to_json_books(users_dict)
 
     def borrow_book(self, user_id, book_isbn):
         if book_isbn in self.availeble_books:
@@ -36,12 +29,12 @@ class Library:
 
     def search_book_by_title(self, title:str):
         for book in self.books:
-            if book.title == title:
+            if book["title"] == title:
                 return book  
             
     def search_book_by_outher(self, outher:str):
         for book in self.books:
-            if book.outher == outher:
+            if book["outher"] == outher:
                 return book
             
     
@@ -57,5 +50,4 @@ class Library:
                 
         with open("data/users_ss.json", "w") as users_data:
             json.dump(users, users_data, indent=4)
-
 

@@ -6,4 +6,5 @@ if __name__ == "__main__":
     l = Library()
     l.add_book(b)
     print(l.search_book_by_title("Dracula"))
+    print(l.users[0]["name"])
     
