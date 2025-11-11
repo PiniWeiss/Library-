@@ -1,0 +1,79 @@
+{
+    "users": [
+        {
+            "name": "Daniel Levy",
+            "id": "A1B2C3D4E5F6G7H8I9J0",
+            "borrroed_books": []
+        },
+        {
+            "name": "Maya Cohen",
+            "id": "B2C3D4E5F6G7H8I9J0K1",
+            "borrroed_books": []
+        },
+        {
+            "name": "Yosef Mizrahi",
+            "id": "C3D4E5F6G7H8I9J0K1L2",
+            "borrroed_books": []
+        },
+        {
+            "name": "Noa Friedman",
+            "id": "D4E5F6G7H8I9J0K1L2M3",
+            "borrroed_books": []
+        },
+        {
+            "name": "Itay Shapira",
+            "id": "E5F6G7H8I9J0K1L2M3N4",
+            "borrroed_books": []
+        },
+        {
+            "name": "Shira Avraham",
+            "id": "F6G7H8I9J0K1L2M3N4O5",
+            "borrroed_books": []
+        },
+        {
+            "name": "Ori Golan",
+            "id": "G7H8I9J0K1L2M3N4O5P6",
+            "borrroed_books": []
+        },
+        {
+            "name": "Hila Barak",
+            "id": "H8I9J0K1L2M3N4O5P6Q7",
+            "borrroed_books": []
+        },
+        {
+            "name": "Ron Haham",
+            "id": "I9J0K1L2M3N4O5P6Q7R8",
+            "borrroed_books": []
+        },
+        {
+            "name": "Liam Baruch",
+            "id": "J0K1L2M3N4O5P6Q7R8S9",
+            "borrroed_books": []
+        },
+        {
+            "name": "Emily David",
+            "id": "K1L2M3N4O5P6Q7R8S9T0",
+            "borrroed_books": []
+        },
+        {
+            "name": "Omri Klein",
+            "id": "L2M3N4O5P6Q7R8S9T0U1",
+            "borrroed_books": []
+        },
+        {
+            "name": "Tamar Weiss",
+            "id": "M3N4O5P6Q7R8S9T0U1V2",
+            "borrroed_books": []
+        },
+        {
+            "name": "Gil Tzur",
+            "id": "N4O5P6Q7R8S9T0U1V2W3",
+            "borrroed_books": []
+        },
+        {
+            "name": "Alma Raz",
+            "id": "O5P6Q7R8S9T0U1V2W3X4",
+            "borrroed_books": []
+        }
+    ]
+}
