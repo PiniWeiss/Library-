@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 from core.book import Book
+=======
+from user import User
+from book import Book
+>>>>>>> shlomo
 import json
 from core.json_meneger import Data
 
@@ -23,6 +28,14 @@ class Library:
         with open("data/books.json", "w") as books:         
             json.dump(books_j, books, indent=4)
 
+    def add_user(self, user):
+        self.users.append(user)
+        print(f"{user} add to your libary")
+
+    def borrow_book(self, user_id, book_isbn):
+        if book_isbn in self.availeble_books:
+            book_isbn.is_availble = False
+            user_id.self.borrowed_books.append(book_isbn)
 
     def search_book_by_title(self, title:str):
         for book in self.books:
@@ -34,7 +47,9 @@ class Library:
             if book.outher == outher:
                 return book
             
+    
     @staticmethod
+<<<<<<< HEAD
     def load_books_from_json(self):
         with open("data/books.json", "r") as books:
            books_j = json.load(books)
@@ -53,3 +68,17 @@ class Library:
     #     with open("data/books.json", "w") as books:         
     #         json.dump(books_j, books, indent=4)
             
+=======
+    def add_user_to_json(user:User):
+        user_dict = {}
+        user_dict["name"] = user.name
+        user_dict["id"] = user.id
+        user_dict["borroed_books"] = []
+        with open("data/users_ss.json", "r") as d:
+            users = json.load(d)
+            users["users"].append(user_dict) 
+                
+        with open("data/users_ss.json", "w") as users_data:
+            json.dump(users, users_data, indent=4)
+
+>>>>>>> shlomo
